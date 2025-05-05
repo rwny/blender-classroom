@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Walk Comparison</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; height: 100vh; }
+        #chart-container { width: 100%; height: 100%; margin: 0; }
+        canvas { background-color: #fff; width: 100% !important; height: 100% !important; }
+        .zoom-controls {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .zoom-controls button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Comparison of Random Walk Types</h2>
+    <div class="zoom-controls">
+        <button onclick="resetZoom()">Reset Zoom</button>
+        <button onclick="toggleDragMode()">Toggle Drag Mode</button>
+        <button onclick="recalculateChart()">Recalculate</button>
+    </div>
+    <div id="chart-container">
+        <canvas id="randomWalkChart"></canvas>
+    </div>
+
+    <!-- Include Chart.js and plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0/dist/chartjs-plugin-annotation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js"></script>
+
+    <script>
+        let chart;
+        let dragMode = false;
+        let upper_bound = 1;
+        let lower_bound = -1;
+        let reflection_constant = 2.0;
+
+        function toggleDragMode() {
+            dragMode = !dragMode;
+            chart.options.plugins.zoom.zoom.drag.enabled = dragMode;
+            chart.update();
+        }
+
+        function resetZoom() {
+            chart.resetZoom();
+        }
+
+        function generateData(n, ystep) {
+            // Initialize arrays
+            let y_standard = [0];
+            let y_mirror = [0];
+            let y_pinned = [0];
+
+            for (let i = 0; i < n - 1; i++) {
+                // Generate random step
+                let step = (Math.random() > 0.5) ? ystep : -ystep;
+
+                // Standard Random Walk
+                let next_standard = y_standard[y_standard.length - 1] + step;
+                y_standard.push(next_standard);
+
+                // Mirror Random Walk
+                let next_mirror = y_mirror[y_mirror.length - 1] + step;
+                if (next_mirror > upper_bound) {
+                    next_mirror = reflection_constant * upper_bound - next_mirror;
+                } else if (next_mirror < lower_bound) {
+                    next_mirror = reflection_constant * lower_bound - next_mirror;
+                }
+                y_mirror.push(next_mirror);
+
+                // Pinned Random Walk
+                let next_pinned = y_pinned[y_pinned.length - 1] + step;
+                if (next_pinned > upper_bound) {
+                    next_pinned = upper_bound;
+                } else if (next_pinned < lower_bound) {
+                    next_pinned = lower_bound;
+                }
+                y_pinned.push(next_pinned);
+            }
+
+            return { y_standard, y_mirror, y_pinned };
+        }
+
+        function recalculateChart() {
+            const n = 500;
+            const ystep = 0.1;
+            const { y_standard, y_mirror, y_pinned } = generateData(n, ystep);
+            
+            // Update datasets
+            chart.data.datasets[0].data = y_standard;
+            chart.data.datasets[1].data = y_mirror;
+            chart.data.datasets[2].data = y_pinned;
+            
+            // Reset zoom and update chart
+            chart.resetZoom();
+            chart.update();
+        }
+
+        window.onload = function () {
+            const n = 500;
+            const ystep = 0.1;
+            const { y_standard, y_mirror, y_pinned } = generateData(n, ystep);
+
+            // Create Chart
+            const ctx = document.getElementById('randomWalkChart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: Array.from({length: n}, (_, i) => i),
+                    datasets: [
+                        {
+                            label: 'Standard Random Walk',
+                            data: y_standard,
+                            borderColor: 'blue',
+                            fill: false,
+                            tension: 0,
+                            pointRadius: 0
+                        },
+                        {
+                            label: 'Mirror Random Walk',
+                            data: y_mirror,
+                            borderColor: 'red',
+                            fill: false,
+                            tension: 0,
+                            pointRadius: 0
+                        },
+                        {
+                            label: 'Pinned Random Walk',
+                            data: y_pinned,
+                            borderColor: 'green',
+                            fill: false,
+                            tension: 0,
+                            pointRadius: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: { color: 'black' }
+                        },
+                        annotation: {
+                            annotations: [
+                                {
+                                    type: 'box',
+                                    yMin: lower_bound,
+                                    yMax: upper_bound,
+                                    backgroundColor: 'lightyellow',
+                                    borderWidth: 0,
+                                    drawTime: 'beforeDatasetsDraw'
+                                },
+                                {
+                                    type: 'line',
+                                    yMin: upper_bound,
+                                    yMax: upper_bound,
+                                    borderColor: 'darkred',
+                                    borderDash: [5, 5],
+                                    borderWidth: 1,
+                                    drawTime: 'afterDatasetsDraw'
+                                },
+                                {
+                                    type: 'line',
+                                    yMin: lower_bound,
+                                    yMax: lower_bound,
+                                    borderColor: 'darkred',
+                                    borderDash: [5, 5],
+                                    borderWidth: 1,
+                                    drawTime: 'afterDatasetsDraw'
+                                }
+                            ]
+                        },
+                        zoom: {
+                            pan: {
+                                enabled: true,
+                                mode: 'x',
+                                speed: 10
+                            },
+                            zoom: {
+                                wheel: { enabled: true },
+                                pinch: { enabled: true },
+                                drag: { 
+                                    enabled: dragMode,
+                                    borderColor: 'rgba(0,0,0,0.5)',
+                                    backgroundColor: 'rgba(255,255,255,0.3)'
+                                },
+                                mode: 'x',
+                                speed: 0.1
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Comparison of Random Walk Types',
+                            color: 'black'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Step', color: 'black' },
+                            ticks: { color: 'black' },
+                            min: 0,
+                            max: n-1
+                        },
+                        y: {
+                            title: { display: true, text: 'Position', color: 'black' },
+                            ticks: { color: 'black' },
+                            suggestedMin: lower_bound - 0.5,
+                            suggestedMax: upper_bound + 0.5
+                        }
+                    },
+                    grid: {
+                        drawBorder: true,
+                        color: 'lightgray'
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+site_name: rwny
+theme:
+  name: material
+  palette:
+    scheme: slate
+nav:
+  - Home: index.md
+  - Mesh: 
+      - box: Mesh/box.md
+      - cube: Mesh/cube.md
+  # - x1:
+  #     - Installation: getting-started/installation.md
+  #     - Usage: getting-started/usage.md
+  # - x2:
+  #     - Feature 1: features/feature1.md
+plugins:
+  - search

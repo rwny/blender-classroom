@@ -1,5 +1,5 @@
 site_name: rwny
-site_url: https://yourusername.github.io/b3d-classroom  # update with your GitHub username/repo
+site_url: https://rwny.github.io/b3d-classroom  # update with your GitHub username/repo
 theme:
   name: material
   palette:

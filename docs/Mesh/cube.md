@@ -2,4 +2,4 @@
 
 เมื่อคลิกที่ภาพในหน้าเว็บ ระบบจะนำทางไปยังไฟล์รูปภาพที่มีขนาดจริงตามที่อ้างอิงไว้ในลิงก์นี้.
 
-[![BoxImage](../images/img-box851.png)](../images/img-box851.png)
+[![BoxImage](../images/img-box852.png)](../images/img-box852.png)

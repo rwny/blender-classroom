@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@300;400;500;700&display=swap');
+
+:root {
+  --md-text-font-size: 1rem;
+  --md-text-font-family: "Noto Sans Thai Looped", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Noto Sans Thai Looped", sans-serif;
+}
+
+.md-typeset {
+  font-size: 1rem; /* Changed from 0.8rem to 1rem for better readability */
+  font-family: "Noto Sans Thai Looped", sans-serif;
+}
+
+.md-typeset h1 {
+  font-size: 2rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.5rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.2rem;
+}
+
+.md-nav {
+  font-size: 0.9rem; /* Slightly smaller for navigation */
+}

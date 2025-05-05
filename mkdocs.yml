@@ -4,15 +4,21 @@ theme:
   name: material
   palette:
     scheme: slate
+  font:
+    text: Noto Sans Thai Looped
+    code: Roboto Mono
+  features:
+    - navigation.instant
+  icon:
+    logo: material/book-open-page-variant
 nav:
   - Home: index.md
+  - Vector:
+      - vector: Vector/vector.md
   - Mesh: 
       - box: Mesh/box.md
       - cube: Mesh/cube.md
-  # - x1:
-  #     - Installation: getting-started/installation.md
-  #     - Usage: getting-started/usage.md
-  # - x2:
-  #     - Feature 1: features/feature1.md
 plugins:
   - search
+extra_css:
+  - stylesheets/extra.css

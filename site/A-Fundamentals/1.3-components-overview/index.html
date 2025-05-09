@@ -75,7 +75,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -133,7 +133,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -143,7 +143,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -402,27 +402,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#131-input-nodes" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1.3.1 Input Nodes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#132-output-nodes" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      1.3.2 Output Nodes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-topics" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Topics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-geometry-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Geometry Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#134-attribute-field-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Attribute &amp; Field Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#135-utility-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.5 Utility Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#136-instance-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.6 Instance Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#137-group-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.7 Group Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      สรุป
     </span>
   </a>
   
@@ -2275,11 +2329,64 @@
 
 
 <h1 id="13-components-overview">1.3 Components Overview</h1>
-<!-- Add content here -->
+<p>ใน Geometry Nodes ของ Blender ทุกสิ่งประกอบขึ้นจาก <strong>Node Components</strong> หรือ "คอมโพเนนต์" ซึ่งเป็นตัวต่อเล็ก ๆ ที่มีหน้าที่เฉพาะ<br />
+โดยการเชื่อมต่อ node ต่าง ๆ เข้าด้วยกัน เราสามารถสร้างประกอบกันเป็นรูปทรง หรือ ระบบ animation ที่ซับซ้อนได้</p>
+<p>ในหัวข้อนี้ เราจะแยกแยะประเภทของคอมโพเนนต์หลัก ๆ ที่ใช้งานบ่อยใน Geometry Nodes</p>
+<hr />
+<p><img alt="input nodes" src="../../images/input/112601.png" /></p>
+<p>ทุกครั้งหลังจากสร้าง Geometrynodes แล้วเห็น 2 nodes นี้เป็นค่าเริ่มต้นเสมอ</p>
+<h2 id="131-input-nodes">1.3.1 Input Nodes</h2>
+<p>ใช้สำหรับนำข้อมูลเข้าสู่ระบบ เช่น:</p>
+<ul>
+<li><strong>Geometry</strong>: นำ geometry จากต้นทางเข้ามาใช้งาน หรือ สร้างขึ้นมา
+   <!-- - **Value / Vector / Boolean / Color**: ป้อนค่าคงที่ต่าง ๆ --></li>
+</ul>
+<!-- - **Object Info / Collection Info**: ดึงข้อมูลจากวัตถุอื่นใน scene -->
 
-<h2 id="overview">Overview</h2>
-<h2 id="examples">Examples</h2>
-<h2 id="related-topics">Related Topics</h2>
+<h2 id="132-output-nodes">1.3.2 Output Nodes</h2>
+<p>ใช้สำหรับส่งผลลัพธ์ของ node graph กลับไปที่ modifier:</p>
+<p><img alt="input nodes" src="../../images/input/114217.png" /></p>
+<ul>
+<li><strong>Group Output</strong>: จุดสิ้นสุดของ node group สำหรับส่งข้อมูลที่ได้ ออกไปสู่โปรแกรมหลัก</li>
+<li><strong>Viewer (Blender 4.x)</strong>: สำหรับดูผลลัพธ์ชั่วคราวระหว่างทำงาน &gt; ข้อมูลจะแสดงที่ spread sheet หรือ ในหน้าจอ 3D เปิด Viewer Node &gt; Attribute Text</li>
+</ul>
+<h2 id="_1"><img alt="spreadsheet" src="../../images/input/113859.png" /></h2>
+<p><img alt="viewer" src="../../images/input/113759.png" /></p>
+<h2 id="133-geometry-nodes">1.3.3 Geometry Nodes</h2>
+<p>แกนหลักของการจัดการรูปทรง: </p>
+<ul>
+<li><strong>Mesh Primitives</strong>: เช่น Cube, Ico Sphere, Cylinder</li>
+<li><strong>Curve / Point / Volume Nodes</strong>: สร้างหรือจัดการ curve, จุด, volume</li>
+<li><strong>Transform / Join / Merge Geometry</strong>: รวมและปรับแต่งรูปทรง</li>
+</ul>
+<h2 id="134-attribute-field-nodes">1.3.4 Attribute &amp; Field Nodes</h2>
+<p>ใช้จัดการกับข้อมูลในแต่ละจุด เช่น:</p>
+<ul>
+<li><strong>Position, Normal, Index</strong>: ดึงข้อมูลจาก geometry</li>
+<li><strong>Attribute Math / Combine / Separate</strong>: คำนวณและจัดการข้อมูลใน field</li>
+</ul>
+<h2 id="135-utility-nodes">1.3.5 Utility Nodes</h2>
+<p>ใช้สำหรับ logic และ control flow:</p>
+<ul>
+<li><strong>Switch, Compare, Boolean Math</strong>: ควบคุมเงื่อนไขและการทำงาน</li>
+<li><strong>Map Range, Clamp, Noise Texture</strong>: สร้างความเปลี่ยนแปลงหรือสุ่มค่า</li>
+</ul>
+<h2 id="136-instance-nodes">1.3.6 Instance Nodes</h2>
+<p>ใช้สำหรับสร้างวัตถุซ้ำ ๆ:</p>
+<ul>
+<li><strong>Instance on Points</strong></li>
+<li><strong>Pick Instance</strong></li>
+<li><strong>Realize Instances</strong></li>
+</ul>
+<h2 id="137-group-nodes">1.3.7 Group Nodes</h2>
+<ul>
+<li>รวม node หลายตัวเป็นกลุ่มเดียว เพื่อความเป็นระเบียบและนำกลับมาใช้ซ้ำ</li>
+<li>รองรับ input/output ของตัวเองเหมือนฟังก์ชันในโปรแกรมมิ่ง</li>
+</ul>
+<hr />
+<h2 id="_2">สรุป</h2>
+<p>การเข้าใจภาพรวมของคอมโพเนนต์ใน Geometry Nodes จะช่วยให้สามารถวางระบบ node graph ได้อย่างมีโครงสร้าง<br />
+ในบทถัดไป เราจะลงลึกไปที่การใช้งาน <strong>Fields และ Attribute</strong> ซึ่งเป็นหัวใจสำคัญของการควบคุมข้อมูลในระบบ node graph ของ Blender</p>
 
 
 

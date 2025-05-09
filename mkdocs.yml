@@ -4,14 +4,14 @@ theme:
   name: material
   palette: 
     # Palette toggle for light mode
-    - scheme: default
+    - scheme: light
       primary: teal
       accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
-    - scheme: slate
+    - scheme: default
       primary: teal
       accent: deep orange
       toggle:

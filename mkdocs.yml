@@ -36,7 +36,7 @@ copyright: CC 2568 rawee pimchan - เพื่อการศึกษา :) 68
 nav:
   - Home: index.md
 # part 1
-  - Fundamentals:
+  - พื้นฐาน:
       - 1.1 What is Geometry Nodes: A-Fundamentals/1.1-what-is-geometry-nodes.md
       - 1.2 Getting Started: A-Fundamentals/1.2-getting-started.md
       - 1.3 Components Overview: A-Fundamentals/1.3-components-overview.md
@@ -47,8 +47,10 @@ nav:
       - 1.8 Curve and Surface: A-Fundamentals/1.8-curve-surface.md
       - 1.9 Mesh Basics: A-Fundamentals/1.9-mesh-basics.md
       - 1.10 Reuse and Node Groups: A-Fundamentals/1.10-reuse-nodegroups.md
-      - 1.11 Math Basic: A-Fundamentals/1.11-math-basics.md
-      - 1.12 Math Normal: A-Fundamentals/1.12-math-normal.md
+      - 1.11 Math - Basic: A-Fundamentals/1.11-math-basics.md
+      - 1.12 Math - Vector: A-Fundamentals/1.12-math-vector.md
+      - 1.13 Math - Normal: A-Fundamentals/1.13-math-normal.md
+
 
 # part 2
   - Geometry:

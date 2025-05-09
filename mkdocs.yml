@@ -2,23 +2,139 @@ site_name: rwny
 site_url: https://rwny.github.io/b3d-classroom  # update with your GitHub username/repo
 theme:
   name: material
-  palette:
-    scheme: slate
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Noto Sans Thai Looped
     code: Roboto Mono
   features:
     - navigation.instant
+    - navigation.top
+    - toc.integrate
   icon:
     logo: material/book-open-page-variant
+
+extra: 
+  analytics:
+    provider: google
+    property: G-66NHY88YXV
+  social:
+    - icon: fontawesome/brands/x-twitter
+      name: 3drwny Twitter/X
+      link: https://x.com/3drwny
+    # You can add more social links as needed
+copyright: 2568-2568 rawee pimchan - เพื่อการศึกษา
 nav:
   - Home: index.md
-  - Vector:
-      - vector: Vector/vector.md
-  - Mesh: 
-      - box: Mesh/box.md
-      - cube: Mesh/cube.md
+# part 1
+  - Fundamentals:
+      - 1.1 What is Geometry Nodes: A-Fundamentals/1.1-what-is-geometry-nodes.md
+      - 1.2 Getting Started: A-Fundamentals/1.2-getting-started.md
+      - 1.3 Components Overview: A-Fundamentals/1.3-components-overview.md
+      - 1.4 Fields and Attributes: A-Fundamentals/1.4-fields-and-attributes.md
+      - 1.5 Interface Basics: A-Fundamentals/1.5-interface-basics.md
+      - 1.6 Data Flow: A-Fundamentals/1.6-data-flow.md
+      - 1.7 Data Structures: A-Fundamentals/1.7-data-structures.md
+      - 1.8 Curve and Surface: A-Fundamentals/1.8-curve-surface.md
+      - 1.9 Mesh Basics: A-Fundamentals/1.9-mesh-basics.md
+      - 1.10 Reuse and Node Groups: A-Fundamentals/1.10-reuse-nodegroups.md
+      # - 1.11 Python for Geometry Nodes: A-Fundamentals/1.11-python-basics.md
+# part 2
+  - Geometry:
+      - Tiling:
+          - Tile Pattern 1: B-Geometry/Tiling/tile-pattern-1.md
+          - Tile Pattern 2: B-Geometry/Tiling/tile-pattern-2.md
+          - Tile Pattern 3: B-Geometry/Tiling/tile-pattern-3.md
+          - Hexagonal Puzzle: B-Geometry/Tiling/hexagonal-puzzle.md
+      - Agents:
+          - Point Attractor 1: B-Geometry/Agents/point-attractor-1.md
+          - Point Attractor 2: B-Geometry/Agents/point-attractor-2.md
+          - Curve Attractor: B-Geometry/Agents/curve-attractor.md
+          - Vector Field: B-Geometry/Agents/vector-field.md
+      - Formulas:
+          - Spiral: B-Geometry/Formulas/spiral.md
+          - Ripple: B-Geometry/Formulas/ripple.md
+          - Fibonacci: B-Geometry/Formulas/fibonacci.md
+          - Fractal Tree: B-Geometry/Formulas/fractal-tree.md
+      - Randomness:
+          - Wave Surface: B-Geometry/Random/wave-surface.md
+          - Gradational Random: B-Geometry/Random/gradational-random.md
+          - Drape: B-Geometry/Random/drape.md
+          - Random Wire: B-Geometry/Random/random-wire.md
+      - Remapping:
+          - Geometry Remapping: B-Geometry/Remapping/geometry-remapping.md
+          - Pattern Remapping: B-Geometry/Remapping/pattern-remapping.md
+          - Image Remapping: B-Geometry/Remapping/image-remapping.md
+          - Text Remapping: B-Geometry/Remapping/text-remapping.md
+# part 3
+  - Form:
+      - Aggregating:
+          - Brick Wall: C-Form/Aggregating/brick-wall.md
+          - Block: C-Form/Aggregating/block.md
+          - Bird Nest: C-Form/Aggregating/bird-nest.md
+          - Pine Cone: C-Form/Aggregating/pine-cone.md
+      - Framing:
+          - Waffle: C-Form/Framing/waffle.md
+          - Contour: C-Form/Framing/contour.md
+          - Weaving: C-Form/Framing/weaving.md
+          - Geodesic Dome: C-Form/Framing/geodesic-dome.md
+      - Tessellating:
+          - Shell: C-Form/Tessellating/shell.md
+          - Gouge: C-Form/Tessellating/gouge.md
+          - Pyramid: C-Form/Tessellating/pyramid.md
+          - Bubble: C-Form/Tessellating/bubble.md
+      - Mesh:
+          - Mesh Subdivision: C-Form/Mesh/mesh-subdivision.md
+          - Chained Tile: C-Form/Mesh/chained-tile.md
+          - Metaball: C-Form/Mesh/metaball.md
+          - Isosurface: C-Form/Mesh/isosurface.md
+      - Drawing:
+          - 2D Cut Drawing: C-Form/Drawing/2d-cut.md
+          - Section Drawing: C-Form/Drawing/section.md
+          - Text Labeling: C-Form/Drawing/text-label.md
+          - Make 2D: C-Form/Drawing/make-2d.md
+# part 4
+  - Simulation:
+      - Physics:
+          - Tensile Fabric: C-Simulation/Physics/tensile-fabric.md
+          - Inflated Structure: C-Simulation/Physics/inflated-structure.md
+          - Origami: C-Simulation/Physics/origami.md
+          - Differential Growth: C-Simulation/Physics/differential-growth.md
+      # - Optimization:
+      #     - Circle Packing: C-Simulation/Optimization/circle-packing.md
+      #     - Panel Optimization: C-Simulation/Optimization/panel-optimization.md
+      #     - Solar Radiation Optimization: C-Simulation/Optimization/solar-radiation.md
+      #     - Remeshing: C-Simulation/Optimization/remeshing.md
+      # - Bridging:
+          # - Building Map: C-Simulation/Bridging/building-map.md
+          # - Spreadsheet: C-Simulation/Bridging/spreadsheet.md
+          # - Revit: C-Simulation/Bridging/revit.md
+          # - OSC: C-Simulation/Bridging/osc.md
+      # - Python:
+          # - Sine Hat: C-Simulation/Python/sine-hat.md
+          # - Recursive Plant: C-Simulation/Python/recursive-plant.md
+          # - Cloud Ribbon: C-Simulation/Python/cloud-ribbon.md
+          # - Needle Mesh: C-Simulation/Python/needle-mesh.md
+  # - Vector:
+  #     - vector: Vector/vector.md
+  #     - vector translate: Vector/vectormove.md
+  # - Mesh: 
+  #     - box: Mesh/box.md
+  #     - cube: Mesh/cube.md
 plugins:
   - search
-extra_css:
-  - stylesheets/extra.css
+# extra_css:
+#   - stylesheets/extra.css

@@ -31,7 +31,7 @@ extra:
       name: 3drwny Twitter/X
       link: https://x.com/3drwny
     # You can add more social links as needed
-copyright: 2568-2568 rawee pimchan - เพื่อการศึกษา :)
+copyright: CC 2568 rawee pimchan - เพื่อการศึกษา :) 68.05.09
 
 nav:
   - Home: index.md
@@ -107,10 +107,10 @@ nav:
 # part 4
   - Simulation:
       - Physics:
-          - Tensile Fabric: C-Simulation/Physics/tensile-fabric.md
-          - Inflated Structure: C-Simulation/Physics/inflated-structure.md
-          - Origami: C-Simulation/Physics/origami.md
-          - Differential Growth: C-Simulation/Physics/differential-growth.md
+          - Tensile Fabric: D-Simulation/Physics/tensile-fabric.md
+          - Inflated Structure: D-Simulation/Physics/inflated-structure.md
+          - Origami: D-Simulation/Physics/origami.md
+          - Differential Growth: D-Simulation/Physics/differential-growth.md
       # - Optimization:
       #     - Circle Packing: C-Simulation/Optimization/circle-packing.md
       #     - Panel Optimization: C-Simulation/Optimization/panel-optimization.md

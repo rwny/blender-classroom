@@ -309,8 +309,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -343,8 +341,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -353,15 +349,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#121-geometry-nodes-workspace" class="md-nav__link">
+  <a href="#12" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.1 เปิดใช้งาน Geometry Nodes Workspace
+      1.2 เริ่มใช้งาน
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 เริ่มใช้งาน">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-modifier-geometry-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 สร้าง Modifier &gt; Geometry Nodes
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#122-layout-geometry-nodes-editor" class="md-nav__link">
     <span class="md-ellipsis">
       1.2.2 ทำความเข้าใจ Layout ของ Geometry Nodes Editor
@@ -369,17 +375,17 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#123" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.3 สร้างกราฟแรกของคุณ
+      1.2.3 สร้างกราฟแรกของ
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#124-viewer-node-blender-4x" class="md-nav__link">
     <span class="md-ellipsis">
       1.2.4 การใช้ Viewer Node (Blender 4.x)
@@ -387,13 +393,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#125-save-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       1.2.5 Save และจัดระเบียบ workspace
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2312,31 +2323,56 @@
 
 
 
-<h1 id="12">1.2 เริ่มใช้งาน</h1>
-<p>ในหัวข้อนี้ เราจะเรียนรู้วิธีเริ่มต้นใช้งาน Geometry Nodes ใน Blender ตั้งแต่การเปิดใช้งาน ไปจนถึงการสร้าง node graph พื้นฐาน</p>
+  <h1>1.2 Getting Started</h1>
+
+<h2 id="12">1.2 เริ่มใช้งาน</h2>
+<p>ในหัวข้อนี้ เราจะเรียนรู้วิธีเริ่มต้นใช้งาน Geometry Nodes ใน Blender ตั้งแต่การเปิดใช้งาน ไปจนถึงการสร้าง node graph พื้นฐาน </p>
+<p>( การทำงานแบบ visual programming บางที่ก็เรียกว่า graph )</p>
 <hr />
-<h2 id="121-geometry-nodes-workspace">1.2.1 เปิดใช้งาน Geometry Nodes Workspace</h2>
-<ul>
-<li>วิธีสร้าง Geometry Nodes modifier</li>
+<h3 id="121-modifier-geometry-nodes">1.2.1 สร้าง Modifier &gt; Geometry Nodes</h3>
+<ol>
 <li>การเลือกวัตถุเพื่อใช้งานกับ node graph</li>
-</ul>
-<h2 id="122-layout-geometry-nodes-editor">1.2.2 ทำความเข้าใจ Layout ของ Geometry Nodes Editor</h2>
+<li>เปิด tab Modifier</li>
+<li>Add new Modifier</li>
+<li>Geometry Nodes</li>
+</ol>
+<p><img alt="image" src="../../images/102getstart/h202020.png" /></p>
+<h3 id="122-layout-geometry-nodes-editor">1.2.2 ทำความเข้าใจ Layout ของ Geometry Nodes Editor</h3>
 <ul>
 <li>อินเทอร์เฟซของ Geometry Node Editor</li>
 <li>Input/Output socket และการเชื่อมต่อระหว่าง node</li>
 </ul>
-<h2 id="123">1.2.3 สร้างกราฟแรกของคุณ</h2>
+<p><img alt="image" src="../../images/102getstart/getstart826.png" /></p>
+<h3 id="123">1.2.3 สร้างกราฟแรกของ</h3>
+<p>ลองตัวอย่างแรก Geometry Nodes Modifier </p>
 <ul>
-<li>การเพิ่ม Geometry Nodes Modifier</li>
-<li>สร้างจุด (point), mesh, หรือรูปทรงพื้นฐาน</li>
-<li>การ preview output geometry</li>
+<li>
+<p>เปลี่ยนที่วัตถุด้วย set position </p>
+<p>1 เพิ่ม nodes ใหม่ คลิ๊กที่เมนู Add &gt; Geometry &gt; Write &gt; Set Position </p>
+<p>2 หรือ คลิ๊กที่หน้าจอ Geometry Nodes &gt; Shift A &gt; Geometry &gt; Write &gt; Set Position</p>
+<p>3 หรือ คลิ๊กที่หน้าจอ Geometry Nodes &gt; Shift A &gt; พิมพ์ Set .. เมนูจะทำการค้นหาคำสั่งที่ขึ้นต้นด้วยคำที่เราพิมพ์ ทันที เลือก Set Position / วิธีนี้จะเร็วที่สุด หลังจากคล่องแล้ว เดี๋ยวเราจะจำชื่อชื่อคำสั่งต่างๆ ได้เอง</p>
+<p>4 วางลำดับ ขั้นตอนการทำงาน ตามในรูป
+    - คำสั่ง Set Position จะรับข้อมูล Geometry และส่งออกข้อมูล Geometry เหมือนกัน 
+    - มีคำสั่งย่อย ดังนี้<br />
+      - Selection
+      - Position
+      - Offset ในที่นี้จะใส่ค่าเฉพาะใน offset เท่านั้น (x, y, z) จะเห็นว่า วัตถุ ย้ายไปอยู่ตามตำแหน่งที่เสากรอกลงไป
+  <img alt="image" src="../../images/102getstart/get205016.png" /></p>
+</li>
+<li>
+<p>นอกจาก รูปทรงตั้งต้นแล้ว ยังสามารถสร้างวัตถุพื้นฐาน ใน geometry node editor ได้เหมือนกัน</p>
+</li>
+<li>Mesh &gt; Primitives &gt; icosphere
+  <img alt="image" src="../../images/102getstart/getico.png" />
+  รายการรูปทรงพื้นฐาน Mesh &gt; Primitives &gt; icosphere
+  <img alt="image" src="../../images/102getstart/meshprimitive.png" /></li>
 </ul>
-<h2 id="124-viewer-node-blender-4x">1.2.4 การใช้ Viewer Node (Blender 4.x)</h2>
+<h3 id="124-viewer-node-blender-4x">1.2.4 การใช้ Viewer Node (Blender 4.x)</h3>
 <ul>
 <li>วิธีใช้ node "Viewer"</li>
 <li>การแสดงผลชั่วคราวของ geometry ภายใน graph</li>
 </ul>
-<h2 id="125-save-workspace">1.2.5 Save และจัดระเบียบ workspace</h2>
+<h3 id="125-save-workspace">1.2.5 Save และจัดระเบียบ workspace</h3>
 <ul>
 <li>ตั้งชื่อ node group</li>
 <li>การแยกไฟล์ .blend หรือใช้ asset browser</li>

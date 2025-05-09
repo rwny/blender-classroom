@@ -1,22 +1,11 @@
-site_name: rwny
+site_name: rwny blender classroom
 site_url: https://rwny.github.io/b3d-classroom  # update with your GitHub username/repo
 theme:
   name: material
-  palette: 
-    # Palette toggle for light mode
-    - scheme: light
-      primary: teal
-      accent: deep orange
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - scheme: default
-      primary: teal
-      accent: deep orange
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  palette:
+    scheme: slate
+    primary: teal
+    accent: deep orange
   font:
     text: Noto Sans Thai Looped
     code: Roboto Mono
@@ -29,8 +18,9 @@ theme:
 
 plugins:
   - search
-# extra_css:
-#   - stylesheets/extra.css
+
+extra_css:
+  - stylesheets/extra.css
 
 extra: 
   analytics:
@@ -41,7 +31,7 @@ extra:
       name: 3drwny Twitter/X
       link: https://x.com/3drwny
     # You can add more social links as needed
-copyright: 2568-2568 rawee pimchan - เพื่อการศึกษา
+copyright: 2568-2568 rawee pimchan - เพื่อการศึกษา :)
 
 nav:
   - Home: index.md
@@ -57,7 +47,9 @@ nav:
       - 1.8 Curve and Surface: A-Fundamentals/1.8-curve-surface.md
       - 1.9 Mesh Basics: A-Fundamentals/1.9-mesh-basics.md
       - 1.10 Reuse and Node Groups: A-Fundamentals/1.10-reuse-nodegroups.md
-      # - 1.11 Python for Geometry Nodes: A-Fundamentals/1.11-python-basics.md
+      - 1.11 Math Basic: A-Fundamentals/1.11-math-basics.md
+      - 1.12 Math Normal: A-Fundamentals/1.12-math-normal.md
+
 # part 2
   - Geometry:
       - Tiling:

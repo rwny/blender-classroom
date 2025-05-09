@@ -22,7 +22,7 @@
     
     
       
-        <title>1.7 Data Structures - rwny</title>
+        <title>1.7 Data Structures - rwny blender classroom</title>
       
     
     
@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -70,12 +72,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#17-data-structures" class="md-skip">
+        <a href="#17-geometry-nodes-data-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="rwny" class="md-header__button md-logo" aria-label="rwny" data-md-component="logo">
+    <a href="../.." title="rwny blender classroom" class="md-header__button md-logo" aria-label="rwny blender classroom" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -114,7 +114,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            rwny
+            rwny blender classroom
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -128,33 +128,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -226,13 +200,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="rwny" class="md-nav__button md-logo" aria-label="rwny" data-md-component="logo">
+    <a href="../.." title="rwny blender classroom" class="md-nav__button md-logo" aria-label="rwny blender classroom" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
-    rwny
+    rwny blender classroom
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -494,27 +468,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#171-geometry" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1.7.1 ประเภทของ Geometry
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#172-geometry-component" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      1.7.2 Geometry Component
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-topics" class="md-nav__link">
+  <a href="#173-attribute-domain" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Topics
+      1.7.3 Attribute Domain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174-spreadsheet-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7.4 การใช้ Spreadsheet Viewer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#175-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7.5 การทำงานกับหลาย Component พร้อมกัน
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      สรุป
     </span>
   </a>
   
@@ -588,6 +589,52 @@
   
   <span class="md-ellipsis">
     1.10 Reuse and Node Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.11-math-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.11 Math Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.12-math-normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.12 Math Normal
     
   </span>
   
@@ -2274,12 +2321,97 @@
 
 
 
-<h1 id="17-data-structures">1.7 Data Structures</h1>
-<!-- Add content here -->
-
-<h2 id="overview">Overview</h2>
-<h2 id="examples">Examples</h2>
-<h2 id="related-topics">Related Topics</h2>
+<h1 id="17-geometry-nodes-data-structure">1.7 Geometry Nodes Data Structure</h1>
+<p>Geometry Nodes มีระบบโครงสร้างข้อมูลที่ออกแบบมาให้ยืดหยุ่นและรองรับงานโมเดลสามมิติอย่างหลากหลาย<br />
+ในบทนี้ เราจะเข้าใจว่าข้อมูลใน Geometry มีองค์ประกอบอะไรบ้าง และทำงานอย่างไรในแต่ละ “Domain”</p>
+<hr />
+<h2 id="171-geometry">1.7.1 ประเภทของ Geometry</h2>
+<p>ข้อมูล Geometry ที่สามารถประมวลผลได้ใน Geometry Nodes มีหลายชนิด:</p>
+<ul>
+<li><strong>Mesh</strong>: โครงสร้าง Polygon เช่น Plane, Cube, Sphere</li>
+<li><strong>Curve</strong>: เส้นโค้ง เช่น Bezier, NURBS</li>
+<li><strong>Point Cloud</strong>: จุดลอยตัวในอวกาศ ไม่มีการเชื่อมโยง</li>
+<li><strong>Volume</strong>: ข้อมูล 3D voxel (ใช้ในบาง node เท่านั้น)</li>
+<li><strong>Instances</strong>: สำเนาของ geometry หลาย ๆ ชิ้น ที่แชร์ข้อมูลเดียวกัน (ประหยัดหน่วยความจำ)</li>
+</ul>
+<blockquote>
+<p>⚠️ แต่ละชนิดจะมี node ที่สามารถจัดการได้แตกต่างกัน เช่น mesh ใช้ Extrude ได้ แต่ point cloud ไม่ได้</p>
+</blockquote>
+<hr />
+<h2 id="172-geometry-component">1.7.2 Geometry Component</h2>
+<p>ภายใน Geometry แต่ละชนิด จะประกอบด้วย “Component” ย่อย เช่น:</p>
+<ul>
+<li><strong>Point</strong>: จุดที่เป็นพื้นฐานของ geometry</li>
+<li><strong>Edge</strong>: เส้นตรงที่เชื่อมระหว่างสองจุด</li>
+<li><strong>Face / Polygon</strong>: พื้นที่ที่ล้อมรอบด้วย edge</li>
+<li><strong>Spline</strong>: เส้นโค้งใน curve</li>
+<li><strong>Instance</strong>: สำเนาของ geometry อื่น</li>
+</ul>
+<p>Node หลายตัวจะทำงานเฉพาะกับ Component บางประเภทเท่านั้น เช่น <code>Subdivide Mesh</code> ทำกับ Mesh ได้ แต่ไม่สามารถใช้กับ Curve</p>
+<hr />
+<h2 id="173-attribute-domain">1.7.3 Attribute Domain</h2>
+<p>“Domain” คือระดับของข้อมูลที่ attribute ถูกผูกอยู่กับ:</p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>อธิบาย</th>
+<th>ตัวอย่างข้อมูล</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Point</td>
+<td>จุดบน mesh หรือ curve</td>
+<td>position, random, normal</td>
+</tr>
+<tr>
+<td>Edge</td>
+<td>เส้นเชื่อมระหว่างจุด</td>
+<td>length, crease</td>
+</tr>
+<tr>
+<td>Face / Corner</td>
+<td>ด้านของ polygon หรือมุมของหน้า</td>
+<td>UV, color, area</td>
+</tr>
+<tr>
+<td>Curve</td>
+<td>เส้น spline เดี่ยว ๆ</td>
+<td>length, resolution</td>
+</tr>
+<tr>
+<td>Instance</td>
+<td>แต่ละชิ้น instance</td>
+<td>scale, rotation</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🧠 Node ที่รับ field input จะ “ประเมินค่า” ตาม domain ที่กำหนด</p>
+</blockquote>
+<hr />
+<h2 id="174-spreadsheet-viewer">1.7.4 การใช้ Spreadsheet Viewer</h2>
+<p>เพื่อดูข้อมูลที่อยู่ในแต่ละ Domain:
+- เปิดหน้าต่าง Spreadsheet (View → Area Type → Spreadsheet)
+- เลือกวัตถุที่มี Geometry Nodes
+- เลือก Component → Mesh / Curve / Instance
+- เลือก Domain ที่ต้องการดู (Point / Edge / Face ฯลฯ)</p>
+<p>Spreadsheet ช่วยให้เราตรวจสอบค่าที่ได้จาก field, attribute หรือ index ได้อย่างชัดเจน</p>
+<hr />
+<h2 id="175-component">1.7.5 การทำงานกับหลาย Component พร้อมกัน</h2>
+<p>บาง node เช่น <code>Join Geometry</code>, <code>Merge by Distance</code>, หรือ <code>Separate Geometry</code> สามารถทำงานกับ geometry หลาย component ได้พร้อมกัน<br />
+เราจึงสามารถสร้างระบบที่มี curve, mesh และ instance อยู่ร่วมกันได้ในกราฟเดียว</p>
+<blockquote>
+<p>🎯 ตัวอย่าง: Curve → Convert to Mesh → Instance บนจุด → Join Geometry → ส่งออก</p>
+</blockquote>
+<hr />
+<h2 id="_1">สรุป</h2>
+<p>Geometry ใน Blender ไม่ใช่แค่รูปทรง แต่คือข้อมูลที่ประกอบด้วยจุด, ขอบ, หน้า และคุณสมบัติอื่น ๆ ที่ผูกอยู่ในแต่ละระดับ<br />
+การเข้าใจโครงสร้างข้อมูลเหล่านี้จะช่วยให้เราควบคุม Geometry ได้อย่างแม่นยำและยืดหยุ่นมากขึ้น</p>
+<blockquote>
+<p>📘 "ก่อนจะควบคุมรูปทรง — ต้องเข้าใจโครงสร้างข้อมูลของมันก่อน"</p>
+</blockquote>
 
 
 
@@ -2317,7 +2449,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      2568-2568 rawee pimchan - เพื่อการศึกษา
+      2568-2568 rawee pimchan - เพื่อการศึกษา :)
     </div>
   
   

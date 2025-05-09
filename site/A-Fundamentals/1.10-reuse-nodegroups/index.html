@@ -14,7 +14,7 @@
         <link rel="prev" href="../1.9-mesh-basics/">
       
       
-        <link rel="next" href="../../B-Geometry/Tiling/tile-pattern-1/">
+        <link rel="next" href="../1.11-math-basics/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>1.10 Reuse and Node Groups - rwny</title>
+        <title>1.10 Reuse and Node Groups - rwny blender classroom</title>
       
     
     
@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -70,12 +72,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#110-reuse-nodegroups" class="md-skip">
+        <a href="#110-library-user-object" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="rwny" class="md-header__button md-logo" aria-label="rwny" data-md-component="logo">
+    <a href="../.." title="rwny blender classroom" class="md-header__button md-logo" aria-label="rwny blender classroom" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -114,7 +114,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            rwny
+            rwny blender classroom
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -128,33 +128,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -226,13 +200,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="rwny" class="md-nav__button md-logo" aria-label="rwny" data-md-component="logo">
+    <a href="../.." title="rwny blender classroom" class="md-nav__button md-logo" aria-label="rwny blender classroom" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
-    rwny
+    rwny blender classroom
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -563,27 +537,102 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#1101-node-group" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1.10.1 Node Group
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10.1 Node Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      วิธีการสร้าง:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      การใช้งาน:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1102-asset-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.2 Asset Library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10.2 Asset Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      วิธีตั้งค่า:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      การเรียกใช้งาน:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1103-named-attribute-user-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.3 Named Attribute &amp; User Object
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#1104-modular-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      1.10.4 เทคนิค Modular Workflow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-topics" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Topics
+      ตัวอย่างการใช้งาน
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      สรุป
     </span>
   </a>
   
@@ -593,6 +642,52 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.11-math-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.11 Math Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.12-math-normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.12 Math Normal
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2274,12 +2369,93 @@
 
 
 
-<h1 id="110-reuse-nodegroups">1.10 Reuse Nodegroups</h1>
-<!-- Add content here -->
-
-<h2 id="overview">Overview</h2>
-<h2 id="examples">Examples</h2>
-<h2 id="related-topics">Related Topics</h2>
+<h1 id="110-library-user-object">1.10 Library + User Object</h1>
+<p>Geometry Nodes มีระบบที่ช่วยให้เรา "บรรจุความคิด" และ "ใช้ซ้ำ" ได้อย่างมีประสิทธิภาพ<br />
+บทนี้จะกล่าวถึงการจัดการ <strong>node group</strong>, <strong>asset library</strong>, และการสร้าง <strong>user object</strong> เพื่อเพิ่ม productivity และ modularity ในงานออกแบบ</p>
+<hr />
+<h2 id="1101-node-group">1.10.1 Node Group</h2>
+<p>Node Group คือการรวมกลุ่มของ node หลายตัวให้กลายเป็น block เดียวที่นำกลับมาใช้ซ้ำได้</p>
+<h3 id="_1">วิธีการสร้าง:</h3>
+<ol>
+<li>เลือก node หลายตัว</li>
+<li>กด <code>Ctrl + G</code> เพื่อสร้าง Group</li>
+<li>กำหนด input/output เพื่อใช้งานภายนอก</li>
+</ol>
+<h3 id="_2">การใช้งาน:</h3>
+<ul>
+<li>ใช้ซ้ำได้หลายที่ใน project เดียวกัน</li>
+<li>เปลี่ยนค่าภายในได้ผ่าน input</li>
+<li>ดับเบิ้ลคลิกเพื่อแก้ไขภายใน group</li>
+</ul>
+<blockquote>
+<p>🧠 ใช้ Node Group เพื่อแยก logic, ทำให้กราฟดูสะอาด และเพิ่มความสามารถในการ reuse</p>
+</blockquote>
+<hr />
+<h2 id="1102-asset-library">1.10.2 Asset Library</h2>
+<p>Asset Library คือระบบจัดเก็บ node group, geometry, material ฯลฯ ไว้เป็นคลัง<br />
+สามารถลากมาใช้งานในโปรเจกต์อื่น ๆ ได้โดยไม่ต้อง copy/paste</p>
+<h3 id="_3">วิธีตั้งค่า:</h3>
+<ol>
+<li>สร้าง .blend ไฟล์ที่มี node group ที่ต้องการเก็บ</li>
+<li>บันทึกไฟล์ในโฟลเดอร์ที่ตั้งเป็น Asset Library (Edit → Preferences → File Paths → Asset Libraries)</li>
+<li>คลิกขวาที่ node group → "Mark as Asset"</li>
+</ol>
+<h3 id="_4">การเรียกใช้งาน:</h3>
+<ul>
+<li>เปิด Geometry Node Editor → Asset Browser</li>
+<li>ลาก group ที่ต้องการมาใช้งานได้ทันที</li>
+</ul>
+<hr />
+<h2 id="1103-named-attribute-user-object">1.10.3 Named Attribute &amp; User Object</h2>
+<p>หากต้องการสร้าง geometry พร้อม attribute เพื่อใช้ซ้ำ:</p>
+<ul>
+<li>สร้าง geometry ที่มี attribute เฉพาะ เช่น <code>weight</code>, <code>density</code>, <code>type</code></li>
+<li>ใช้ <code>Store Named Attribute</code> เพื่อฝังข้อมูลไว้ใน geometry</li>
+<li>บันทึกเป็น node group หรือ export ออกเป็น object ใน scene</li>
+</ul>
+<p>สามารถใช้ node เช่น:
+- <code>Named Attribute</code>
+- <code>Store Named Attribute</code>
+- <code>Capture Attribute</code></p>
+<p>เพื่อสร้าง metadata ที่ติดอยู่กับ object นั้น ๆ</p>
+<hr />
+<h2 id="1104-modular-workflow">1.10.4 เทคนิค Modular Workflow</h2>
+<table>
+<thead>
+<tr>
+<th>แนวทาง</th>
+<th>ประโยชน์</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ใช้ node group แทน logic ซ้ำ ๆ</td>
+<td>ลดความซับซ้อนในแต่ละกราฟ</td>
+</tr>
+<tr>
+<td>สร้าง asset library</td>
+<td>ใช้ซ้ำข้ามไฟล์โปรเจกต์ได้</td>
+</tr>
+<tr>
+<td>ฝัง attribute ใน geometry</td>
+<td>ส่งข้อมูลต่อไปยัง shading, simulation หรือ export ได้</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">ตัวอย่างการใช้งาน</h2>
+<ul>
+<li>สร้างระบบเสา-คาน-พื้น เป็น node group modular</li>
+<li>สร้างคลัง ornament และ facade สำหรับลากมาใช้งาน</li>
+<li>ตั้งค่า geometry + attribute แล้ว export เป็น glTF หรือ USD</li>
+</ul>
+<hr />
+<h2 id="_6">สรุป</h2>
+<p>การใช้ Node Group และ Asset Library ทำให้เราสามารถ "เขียนครั้งเดียว ใช้ได้ตลอดไป"<br />
+แนวคิด modular ช่วยให้ workflow สะอาด ชัดเจน และเพิ่มความเร็วในการออกแบบซ้ำ</p>
+<blockquote>
+<p>📦 “ระบบที่ดีไม่ใช่แค่ใช้ได้ — แต่ต้องใช้ซ้ำได้ง่าย”</p>
+</blockquote>
 
 
 
@@ -2317,7 +2493,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      2568-2568 rawee pimchan - เพื่อการศึกษา
+      2568-2568 rawee pimchan - เพื่อการศึกษา :)
     </div>
   
   

@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://rwny.github.io/b3d-classroom/A-Fundamentals/1.11-python-basics/">
+        <link rel="canonical" href="https://rwny.github.io/b3d-classroom/A-Fundamentals/1.12-math-normal/">
       
       
+        <link rel="prev" href="../1.11-math-basics/">
+      
+      
+        <link rel="next" href="../../B-Geometry/Tiling/tile-pattern-1/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>1.11 Python Basics - rwny</title>
+        <title>1.12 Math Normal - rwny blender classroom</title>
       
     
     
@@ -44,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -66,12 +72,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -80,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#111-python-basics" class="md-skip">
+        <a href="#1115-normal-curve" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +100,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="rwny" class="md-header__button md-logo" aria-label="rwny" data-md-component="logo">
+    <a href="../.." title="rwny blender classroom" class="md-header__button md-logo" aria-label="rwny blender classroom" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -110,13 +114,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            rwny
+            rwny blender classroom
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1.11 Python Basics
+              1.12 Math Normal
             
           </span>
         </div>
@@ -124,33 +128,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -222,13 +200,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="rwny" class="md-nav__button md-logo" aria-label="rwny" data-md-component="logo">
+    <a href="../.." title="rwny blender classroom" class="md-nav__button md-logo" aria-label="rwny blender classroom" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
-    rwny
+    rwny blender classroom
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -259,18 +237,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -286,7 +266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Fundamentals
@@ -518,6 +498,169 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.11-math-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.11 Math Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1.12 Math Normal
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.12 Math Normal
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal คืออะไร?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal คืออะไร?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ตัวอย่าง:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-geometry-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal ใน Geometry Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ประเภทของ Normal ตามองค์ประกอบ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal ของ Curve
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal ของ Curve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ตัวอย่างการใช้งาน:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      การใช้งานจริงของ Normal
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2199,12 +2342,131 @@
 
 
 
-<h1 id="111-python-basics">1.11 Python Basics</h1>
-<!-- Add content here -->
+<h1 id="1115-normal-curve">1.11.5 Normal – เวกเตอร์ทิศทางตั้งฉากของจุด เส้น พื้นผิว และ Curve</h1>
+<p><strong>Normal</strong> คือเวกเตอร์ที่แสดงทิศทางตั้งฉากกับพื้นผิวหรือองค์ประกอบใดๆ เช่น จุด, เส้น, ระนาบ หรือ curve<br />
+เป็นแนวคิดสำคัญที่ช่วยในการควบคุมทิศทาง, การแสงเงา, การกระจายวัตถุ และการปรับแต่ง geometry ให้มีความแม่นยำและสมจริง</p>
+<hr />
+<h2 id="normal">Normal คืออะไร?</h2>
+<ul>
+<li><strong>Normal</strong> = ทิศทางที่ตั้งฉากกับพื้นผิว</li>
+<li>มักจะเป็นเวกเตอร์ที่ถูก Normalize (ความยาว = 1)</li>
+<li>ใช้คำว่า “normal vector” เพื่ออธิบายทิศทางนี้</li>
+</ul>
+<h3 id="_1">ตัวอย่าง:</h3>
+<ul>
+<li>กรพดาษ 1 แผ่น จะมีด้านบน ด้านล่าง normal = 1 และว่า ด้านนั้นเป็นด้านบน</li>
+<li>พื้นระนาบ XY → normal คือ <code>(0, 0, 1)</code> ชี้ขึ้นด้านบน</li>
+<li>ผิวหน้าของ mesh → normal เป็น + จะชี้ออกจากผิวนอก </li>
+<li>แสดงในหน้าจอ 3D → face orientation</li>
+<li>Curve → normal อาจเปลี่ยนแปลงตามแกนอ้างอิง</li>
+</ul>
+<hr />
+<h2 id="normal-geometry-nodes">Normal ใน Geometry Nodes</h2>
+<p>ใน Geometry Nodes เราสามารถเข้าถึง normal ได้จาก:</p>
+<ul>
+<li><code>Normal</code> Node → ดึง normal จาก face หรือ point</li>
+<li><code>Curve Tangent</code>, <code>Curve Normal</code> → สำหรับงาน curve</li>
+<li><code>Attribute Statistic</code> / <code>Sample Curve</code> → ใช้เพื่อจัดการ normal ของเส้นโค้ง</li>
+</ul>
+<hr />
+<h2 id="normal_1">ประเภทของ Normal ตามองค์ประกอบ</h2>
+<table>
+<thead>
+<tr>
+<th>องค์ประกอบ</th>
+<th>ความหมายของ Normal</th>
+<th>ตัวอย่าง</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Point</strong></td>
+<td>ทิศทางของจุด — อาจมาจาก attribute หรือ custom data</td>
+<td>ใช้สร้าง radial direction</td>
+</tr>
+<tr>
+<td><strong>Face</strong></td>
+<td>ทิศทางตั้งฉากกับพื้นผิว face</td>
+<td>ใช้ใน shading, lighting</td>
+</tr>
+<tr>
+<td><strong>Edge</strong></td>
+<td>ไม่มี normal โดยตรง แต่สามารถคำนวณจาก adjacent faces</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mesh</strong></td>
+<td>แต่ละจุด/face มี normal ของตัวเอง</td>
+<td>ใช้กับ <code>Set Position</code>, <code>Extrude Mesh</code></td>
+</tr>
+<tr>
+<td><strong>Curve</strong></td>
+<td>ปกติจะมี 2 แกน: <strong>Tangent</strong> และ <strong>Normal</strong> → ใช้กำหนดทิศทางของการ extrude หรือ instance</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- เพิ่มรูปภาพ -->
+<!-- ![normal-vector](../images/normal-vector-diagram.png) -->
 
-<h2 id="overview">Overview</h2>
-<h2 id="examples">Examples</h2>
-<h2 id="related-topics">Related Topics</h2>
+<hr />
+<h2 id="normal-curve">Normal ของ Curve</h2>
+<p>ในงานออกแบบที่เกี่ยวข้องกับเส้นโค้ง (curve) ควรทำความเข้าใจ:</p>
+<ul>
+<li><strong>Tangent</strong> → ทิศทางตามเส้น</li>
+<li><strong>Normal</strong> → ทิศทางตั้งฉากกับ tangent</li>
+<li><strong>Binormal</strong> → ทิศทางที่ตั้งฉากกับทั้งสอง</li>
+</ul>
+<blockquote>
+<p>💡 ใช้ร่วมกับ <code>Frenet Frame</code> หรือ <code>Curve to Mesh</code> เพื่อควบคุมรูปร่างของเส้นเช่น extrude หรือ loft</p>
+</blockquote>
+<h3 id="_2">ตัวอย่างการใช้งาน:</h3>
+<ul>
+<li>สร้างท่อรอบเส้นโค้ง → ใช้ normal เพื่อควบคุมทิศทาง cross-section</li>
+<li>กระจายวัตถุบนเส้นโค้ง → ใช้ normal เพื่อทำให้วัตถุหันหน้าออกนอกเส้น</li>
+</ul>
+<!-- เพิ่มรูป curve normal -->
+<!-- ![curve-normal](../images/curve-normal-example.png) -->
+
+<hr />
+<h2 id="normal_2">การใช้งานจริงของ Normal</h2>
+<table>
+<thead>
+<tr>
+<th>การใช้งาน</th>
+<th>อธิบาย</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lighting &amp; Shading</strong></td>
+<td>ใช้ normal เพื่อคำนวณว่าแสงตกกระทบอย่างไร</td>
+</tr>
+<tr>
+<td><strong>Direction Control</strong></td>
+<td>ใช้ normal เพื่อผลักหรือดึง geometry ออกจากรูปทรงเดิม</td>
+</tr>
+<tr>
+<td><strong>Instance Orientation</strong></td>
+<td>ใช้ normal เพื่อให้วัตถุที่กระจายบนพื้นผิวหันหน้าออก</td>
+</tr>
+<tr>
+<td><strong>Surface Deformation</strong></td>
+<td>ใช้ normal เพื่อปรับรูปร่าง mesh ตามทิศทางของผิว</td>
+</tr>
+<tr>
+<td><strong>Texturing</strong></td>
+<td>ใช้ normal เพื่อควบคุมการ mapping texture บน surface</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<!-- ## ตัวอย่างใน Geometry Nodes
+
+```text
+[Position] -> [Vector Math: Add] -> [Set Position]
+         ↑
+        [Normal] * Strength -->
 
 
 
@@ -2242,7 +2504,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      2568-2568 rawee pimchan - เพื่อการศึกษา
+      2568-2568 rawee pimchan - เพื่อการศึกษา :)
     </div>
   
   

@@ -435,9 +435,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#145-attribute-custom-attributes-and-storing-values" class="md-nav__link">
     <span class="md-ellipsis">
-      สรุป
+      1.4.5 การสร้างและจัดเก็บ Attribute ที่กำหนดเอง (Custom Attributes and Storing Values)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-and-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field and Attribute :
     </span>
   </a>
   
@@ -2313,55 +2322,66 @@
 
 
 <h1 id="14-fields-and-attributes">1.4 Fields and Attributes</h1>
-<p>ใน Geometry Nodes ระบบ “Field” และ “Attribute” เป็นหัวใจสำคัญที่ช่วยให้เราควบคุมค่าต่าง ๆ ในแต่ละจุดของ Geometry ได้อย่างยืดหยุ่นและมีประสิทธิภาพ<br />
-ทั้งสองอย่างนี้เกี่ยวข้องกับข้อมูลที่ไหลผ่าน node graph เพื่อควบคุมลักษณะของ geometry ในระดับจุด (point), เส้น (edge), ระนาบ/พื้นผิว (face)</p>
+<p>ใน Geometry Nodes ระบบ “Field” และ “Attribute” เป็นหัวใจสำคัญที่ช่วยให้เราควบคุมค่าต่าง ๆ ในแต่ละจุดของ Geometry ได้อย่างยืดหยุ่นและมีประสิทธิภาพ</p>
+<p>ทั้งสองอย่างนี้เกี่ยวข้องกับข้อมูลที่ไหลผ่าน node graph เพื่อควบคุมลักษณะของ geometry ในระดับจุด (point), เส้น (edge), ระนาบ/พื้นผิว (face)</p>
 <hr />
-<h2 id="141-fields">1.4.1 Fields คืออะไร?</h2>
+<h3 id="141-fields">1.4.1 Fields คืออะไร?</h3>
 <p><strong>Field</strong> คือรูปแบบของข้อมูลที่สามารถวัดได้ เปลี่ยนแปลงได้ในแต่ละตำแหน่งบน geometry (จุด เส้น ระนาบ ...)</p>
-<p>ตัวอย่างเช่น ค่าความสว่างบนพื้น ในห้องขนาด 5x5 เมตร ที่มีประตู 1 บาน ความสว่างของแต่ละจุดบนพื้นจะไม่เท่ากัน จุดที่อยู่ใกล้ จะสว่างมากกว่าจุดที่อยู่ไกลหน้าต่าง </p>
+<p>ตัวอย่างเช่น ค่าความสว่างบนพื้น ในห้องขนาด 5x5 เมตร ที่มีประตู 1 บาน ความสว่างของแต่ละจุดบนพื้นจะไม่เท่ากัน จุดที่อยู่ใกล้ จะสว่างมากกว่าจุดที่อยู่ไกลหน้าต่าง</p>
 <p>เราจะเก็บข้อมูลนี้ได้ด้วยการ นำเซนเซอร์วัดความสว่างไปว่างที่จุดต่างๆ แล้วบันทึกไว้ (ในรูป ให้จุดสีแดง เป็นเครื่องวัด ความสว่าง ที่ตัววัดแต่ละตัวที่ตำแหน่งต่างๆ )</p>
-<p>ในทาง 3D เราสร้าง grid ขนาด 5x5 แล้วเราจะเก็บค่าที่วัดได้ ไว้ในจุดนั้นๆ 
+<p>ในทาง 3D เราสร้าง grid ขนาด 5x5 แล้วเราจะเก็บค่าที่วัดได้ ไว้ในจุดนั้นๆ
 ข้อมูลที่ได้ 5x5 = 25 ชุดข้อมูลนี้ เรียกว่า Field ของความสว่าง ที่วัดได้</p>
-<p><img alt="image" src="../../images/field/field150056.png" /></p>
-<!-- image -->
+<p><img alt="image" src="../../images/104field/field150056.png" /></p>
 <p>Fields จะไหลผ่าน node graph เหมือน “เส้นทางคำนวณ” และถูกเรียกมาใช้งานภายหลังความความต้องการ เมื่อเรียกใช้</p>
 <ul>
 <li>มีการทำงานแบบ lazy evaluation — ค่าจะถูกคำนวณเมื่อจำเป็นต้องใช้</li>
-<li>เก็บข้อมูลที่ใด้ในรูปตัวแปร เรียกว่า Attribute แอททริบิวต์ </li>
-</ul>
-<!-- -  ถูกนำไปประเมินค่าบน Geometry (รูปทรงเรขาคณิต) -->
-<ul>
+<li>เก็บข้อมูลที่ใด้ในรูปตัวแปร เรียกว่า Attribute แอททริบิวต์</li>
 <li>ให้ผลลัพธ์ออกมาเป็นข้อมูล</li>
 </ul>
 <p>จากจุดนี้ จะเห็นว่า เราสามารถ เก็บ หรือ สร้าง fields ข้อมูลใดๆ ก็ได้
-เช่น </p>
+เช่น</p>
 <ul>
 <li>fields ของ ระยะทาง จุดต่างๆ ถึง ประตู</li>
 <li>fields ของตำแหน่ง X,Y ของ censor แต่ละตัว</li>
 <li>fields ของหมายเลขประจำตัวของ censor แต่ละตัว</li>
 </ul>
-<h2 id="142-attributes">1.4.2 Attributes คืออะไร?</h2>
+<p><img alt="image" src="../../images/104field/distancefield05.png" /></p>
+<blockquote>
+<p>ภาพแสดง field ข้อมูลของความยาว ของเส้น edge length</p>
+<ul>
+<li>curve ใช้ spline parameter เป็นตัวเรียก ความยาวเส้น มาให้</li>
+<li>edge mesh ใช้ vector math position (A - B) = ระยะทางระหว่าง A ถึง B</li>
+</ul>
+</blockquote>
+<p><img alt="image" src="../../images/104field/areafield59.png" /></p>
+<blockquote>
+<p>ภาพแสดง field ข้อมูลพื้นที่ของสี่เหลี่ยม ที่ Node face area ดึงข้อมูลมาแสดง</p>
+</blockquote>
+<h3 id="142-attributes">1.4.2 Attributes คืออะไร?</h3>
 <p><strong>Attribute</strong> คือข้อมูลที่ผูกอยู่กับ geometry เช่นข้อมูลที่ระบุไว้กับจุด เส้น ระนาบ</p>
 <p>จากตัวอย่างข้างต้น ค่าความสว่างที่จุดต่างๆ จุดที่อยู่ใกล้ประตู มีค่ามากกว่าจุดที่อยู่ไกล จุดต่างๆ จะมีค่าตามที่วัดได้ในแต่ละจุดที่เรากำหนดขึ้นมา ดังที่แสดงเป็นตัวเลข</p>
-<p><img alt="image" src="../../images/field/field150108.png" /></p>
+<p><img alt="image" src="../../images/104field/field150108.png" /></p>
 <ul>
 <li>ข้อมูลของ Geometry ที่สามารถถูกจัดเก็บไว้ในแต่ละระดับองค์ประกอบ (domain) ต่อ Vertex, Edge, Face ม ฯลฯ อยู่ที่เราเลือกว่าจะเก็บไว้แบบใหน เพื่อเอาไปทำอะไร</li>
 <li>สามารถเรียกใช้ และ เข้าถึงได้ในรูปแบบของ Fields</li>
 <li>จะถูกส่งผ่าน (propagated) ไปตามโหนด Geometry ต่างๆ</li>
 <li>มีหลายประเภทหลักๆ คือ:<ul>
 <li><strong>แบบ Dynamic:</strong> คือตัวแปรทั่วไปของ blender (Global names) ที่มีให้ใช้งานอยู่เสมอ เช่น ตำแหน่ง (position), ดัชนีของ geometry (index), ดัชนีวัสดุ (material_index)</li>
-<li><strong>แบบ Static:</strong> คือข้อมูลที่เราสร้างขึ้น หรือถูกสร้างขึ้นมา (Generated) เช่น ค่า UV, การเลือก (selection) , หรือ วิธีการคำนวณใดๆ ที่เรากำหนดขึั้น </li>
+<li><strong>แบบ Static:</strong> คือข้อมูลที่เราสร้างขึ้น หรือถูกสร้างขึ้นมา (Generated) เช่น ค่า UV, การเลือก (selection) , หรือ วิธีการคำนวณใดๆ ที่เรากำหนดขึั้น</li>
 </ul>
 </li>
 </ul>
-<h2 id="143-field-attribute">1.4.3 การใช้ Field กับ Attribute ร่วมกัน</h2>
-<p><img alt="field" src="https://docs.blender.org/manual/en/3.0/_images/modeling_geometry-nodes_fields_title.png" /></p>
+<h3 id="143-field-attribute">1.4.3 การใช้ Field กับ Attribute ร่วมกัน</h3>
+<p><img alt="domain" src="../../images/104field/field175.png" /></p>
+<blockquote>
+<p>Random value จะสร้าง field ชุดตัวเลขสุ่ม ในช่วงที่เรากำหนด min-max แล้วเอาค่า (attribute) ไปใช้ ย่อ-ขยาน ขนาดของ grid</p>
+</blockquote>
 <p>ข้อมูลประเภท Field input จะเป็นรูป สี่เหลี่ยม (diamond)</p>
 <ul>
 <li><strong>Position</strong> field ของ position นำมา Scale กับ Index ผลที่ได้ &gt;&gt;</li>
 <li><strong>Set Position</strong> ใส่ค่า Posisition ใหม่ จากค่าที่ได้จากการคำนวณข้างต้น</li>
 </ul>
-<h2 id="144-attribute-domains">1.4.4 Attribute Domains</h2>
+<h3 id="144-attribute-domains">1.4.4 Attribute Domains</h3>
 <p>ข้อมูลแบบ attribute สามารถถูกผูกกับ “domain” ต่าง ๆ เช่น:</p>
 <ul>
 <li><strong>Point Domain</strong> – สำหรับข้อมูลที่เปลี่ยนในแต่ละ vertex</li>
@@ -2370,26 +2390,42 @@
 <li><strong>Spline/Curve Domain</strong> – สำหรับ curve หรือเส้น</li>
 </ul>
 <p>ทำให้เราสามารถทำงานที่ระดับต่างๆ ของ Geometry ได้อย่างง่าย ลบทั้งวัตถุ , face หรือ edge หรือจะเลือกเป็นจุดๆ ใดๆ ก็ได้จากการเลือก Domain</p>
-<p><img alt="domain" src="../../images/field/domain151739.png" /></p>
+<p><img alt="domain" src="../../images/104field/domain151739.png" /></p>
 <hr />
-<h2 id="_1">สรุป</h2>
-<p>การเข้าใจระบบ Field และ Attribute จะช่วยให้คุณควบคุมรูปร่าง สี ขนาด และพฤติกรรมของ geometry ได้อย่างยืดหยุ่น<br />
-ในบทถัดไป เราจะเริ่มทำงานกับ Curve และ Surface ซึ่งจะเป็นเครื่องมือพื้นฐานในการสร้างรูปทรงต่าง ๆ</p>
-<p><strong>คำจำง่าย ๆ</strong>  </p>
+<h3 id="145-attribute-custom-attributes-and-storing-values">1.4.5 การสร้างและจัดเก็บ Attribute ที่กำหนดเอง (Custom Attributes and Storing Values)</h3>
+<p>บางครั้งเราต้องการสร้างข้อมูลขึ้นมาใน Node Tree (จาก Field ต่างๆ ที่เราคำนวณ) แล้วจัดเก็บข้อมูลนั้นไว้เป็น Attribute บน Geometry เพื่อนำไปใช้ในภายหลัง อาจจะในส่วนอื่นของ Node Tree เดียวกัน, ใน Shader Editor, หรือใน Modifier อื่นๆ ที่อยู่ต่อจาก Geometry Nodes นี้</p>
+<p>เราใช้ Node ชื่อ <strong>Store Named Attribute</strong> ในการดำเนินการนี้</p>
+<p><img alt="Store Named Attribute Node" src="../../images/104field/field36.png" /> </p>
+<blockquote>
+<p>สร้างตัวแปร (attribute) ชื่อ NewPosition เก็บค่า position Z+1 </p>
 <ul>
-<li>Field = สูตร  / logic กระบวนการ สำหรับ คำนวณ/ขุด/ค้นหา/ทำให้ได้มา/ ซึ่งข้อมูลที่ต้องกาาร เป็นค่าที่เปลี่ยนแปลงได้</li>
-<li>Attribute =  value / ค่า / ข้อมูล / ที่เก็บข้อมูล </li>
+<li>Store Name Attribute : เก็บ</li>
+<li>Named Attribute : เรียกมาใช้
+</li>
 </ul>
-<p>เราใช้สูตร (field) ทำงานกับข้อมูล (attribute) เพื่อควบคุม / จัดการ geometry!</p>
+</blockquote>
+<p>องค์ประกอบหลักของ Node Store Named Attribute:</p>
+<ul>
+<li><strong>Name:</strong> กำหนดชื่อของ Attribute ที่ต้องการสร้าง หรือเขียนทับลงไป (ถ้าชื่อนั้นมีอยู่แล้ว) ชื่อนี้จะใช้ในการอ้างอิง Attribute นี้ในภายหลังได้จากส่วนอื่นของ blender (เช่น ใน Shader Editor หรือ driver)</li>
+<li><strong>Data Type:</strong> เลือกชนิดข้อมูลที่ต้องการเก็บ เช่น Float (เลขทศนิยม), Vector (ตำแหน่ง/ทิศทาง), Color (สี), Integer (เลขจำนวนเต็ม), Boolean (จริง/เท็จ) ต้องเลือกให้ตรงกับชนิดของข้อมูล Field ที่ป้อนเข้ามา</li>
+<li><strong>Domain:</strong> เลือกว่าจะจัดเก็บ Attribute นี้ไว้ที่ Domain ใด (Point, Edge, Face, Face Corner) ข้อมูล Field ที่ป้อนเข้ามาจะถูกประเมินค่าและจัดเก็บตาม Domain ที่เลือก</li>
+<li><strong>Value (Field Input):</strong> เชื่อมต่อ Field ที่คำนวณได้ (ข้อมูลที่ต้องการจัดเก็บ) เข้าที่นี่</li>
+</ul>
+<p>เมื่อ Node นี้ทำงาน ข้อมูลจาก Field ที่ป้อนเข้ามา จะถูกประเมินค่าสำหรับแต่ละองค์ประกอบใน Domain ที่เลือก และจัดเก็บไว้ใน Attribute ที่มีชื่อตามที่ระบุ</p>
+<p>การเข้าถึง Attribute ที่จัดเก็บไว้ภายหลัง ทำได้โดยใช้ Node <strong>Named Attribute</strong> แล้วระบุชื่อ Attribute ที่ตั้งไว้</p>
+<hr />
+<h3 id="field-and-attribute">Field and Attribute :</h3>
+<p>การเข้าใจระบบ <strong>Field</strong> และ <strong>Attribute</strong> จะช่วยให้เราเล่นกับ รูปร่าง สี ขนาด และพฤติกรรมของ geometry ได้อย่างยืดหยุ่น โดยเราส่งผ่านค่าต่างๆ เพื่อนำไปปรับแต่งได้อย่างไม่จำกัด เช่น เอาระยะทาง ไปกำหนดสีของวัตถุ เป็นต้น</p>
+<ul>
+<li><strong>Field</strong> : สูตร / logic / กระบวนการ สำหรับ คำนวณ/ขุด/ค้นหา/ทำให้ได้มา/ ซึ่งข้อมูลที่ต้องกาาร เป็นค่าที่เปลี่ยนแปลงได้</li>
+<li><strong>Attribute</strong> : value / ค่า / ข้อมูล / ที่เก็บข้อมูล</li>
+</ul>
+<p>เราคิดค้นสูตร (field) แล้วเรียกใช้ (callback) ข้อมูล (attribute) เพื่อควบคุมหรือจัดการ geometry</p>
 <hr />
 <p>Blender manual</p>
 <ul>
-<li>
-<p><a href="https://docs.blender.org/manual/en/3.0/modeling/geometry_nodes/fields.html">Fields</a></p>
-</li>
-<li>
-<p><a href="https://code.blender.org/2021/08/attributes-and-fields/">Attributes and Fields</a></p>
-</li>
+<li><a href="https://docs.blender.org/manual/en/3.0/modeling/geometry_nodes/fields.html">Fields</a></li>
+<li><a href="https://code.blender.org/2021/08/attributes-and-fields/">Attributes and Fields</a></li>
 </ul>
 
 

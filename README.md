@@ -34,4 +34,4 @@
 
 หากมีคำถาม, พบข้อผิดพลาด, หรือต้องการเสนอแนะเนื้อหา สามารถเปิด Discussion หรือ Issue ได้เลย!
 
-https://rwny.github.io/blender-classroom/
+---

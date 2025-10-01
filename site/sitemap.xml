@@ -2,294 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rwny.github.io/b3d-classroom/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.1-what-is-geometry-nodes/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.10-reuse-nodegroups/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.11-math-basics/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.12-math-vector/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.13-math-normal/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.2-getting-started/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.3-components-overview/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.4-fields-and-attributes/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.5-interface-basics/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.6-data-flow/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.7-data-structures/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.8-curve-surface/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/A-Fundamentals/1.9-mesh-basics/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Agents/curve-attractor/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Agents/point-attractor-1/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Agents/point-attractor-2/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Agents/vector-field/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Formulas/fibonacci/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Formulas/fractal-tree/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Formulas/ripple/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Formulas/spiral/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Random/drape/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Random/gradational-random/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Random/random-wire/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Random/wave-surface/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Remapping/geometry-remapping/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Remapping/image-remapping/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Remapping/pattern-remapping/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Remapping/text-remapping/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Tiling/hexagonal-puzzle/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Tiling/tile-pattern-1/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Tiling/tile-pattern-2/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/B-Geometry/Tiling/tile-pattern-3/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Aggregating/bird-nest/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Aggregating/block/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Aggregating/brick-wall/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Aggregating/pine-cone/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Drawing/2d-cut/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Drawing/make-2d/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Drawing/section/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Drawing/text-label/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Framing/contour/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Framing/geodesic-dome/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Framing/waffle/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Framing/weaving/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Mesh/chained-tile/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Mesh/isosurface/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Mesh/mesh-subdivision/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Mesh/metaball/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Tessellating/bubble/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Tessellating/gouge/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Tessellating/pyramid/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/C-Form/Tessellating/shell/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Bridging/building-map/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Bridging/osc/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Bridging/revit/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Bridging/spreadsheet/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Optimization/circle-packing/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Optimization/panel-optimization/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Optimization/remeshing/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Optimization/solar-radiation/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Physics/differential-growth/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Physics/inflated-structure/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Physics/origami/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Physics/tensile-fabric/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Python/cloud-ribbon/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Python/needle-mesh/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Python/recursive-plant/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/D-Simulation/Python/sine-hat/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://rwny.github.io/b3d-classroom/E-Exprience/NoiseTexture/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://rwny.github.io/b3d-classroom/E-Exprience/water/</loc>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/temp/Part1/101fundamental/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/temp/Vector/vector/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://rwny.github.io/b3d-classroom/temp/Vector/vectormove/</loc>
-         <lastmod>2025-05-09</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
 </urlset>

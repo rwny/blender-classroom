@@ -1,2 +1,3 @@
 ﻿# blender-classroom
-: mkdocs serve    
+: mkdocs serve
+: mkdocs build

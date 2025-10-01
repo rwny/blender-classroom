@@ -1,1 +1,2 @@
 ﻿# blender-classroom
+: mkdocs serve    

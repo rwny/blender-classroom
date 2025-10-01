@@ -53,32 +53,32 @@ nav:
 
 
 # part 2
-  - Geometry:
-      - Tiling:
-          - Tile Pattern 1: B-Geometry/Tiling/tile-pattern-1.md
-          - Tile Pattern 2: B-Geometry/Tiling/tile-pattern-2.md
-          - Tile Pattern 3: B-Geometry/Tiling/tile-pattern-3.md
-          - Hexagonal Puzzle: B-Geometry/Tiling/hexagonal-puzzle.md
-      - Agents:
-          - Point Attractor 1: B-Geometry/Agents/point-attractor-1.md
-          - Point Attractor 2: B-Geometry/Agents/point-attractor-2.md
-          - Curve Attractor: B-Geometry/Agents/curve-attractor.md
-          - Vector Field: B-Geometry/Agents/vector-field.md
-      - Formulas:
-          - Spiral: B-Geometry/Formulas/spiral.md
-          - Ripple: B-Geometry/Formulas/ripple.md
-          - Fibonacci: B-Geometry/Formulas/fibonacci.md
-          - Fractal Tree: B-Geometry/Formulas/fractal-tree.md
-      - Randomness:
-          - Wave Surface: B-Geometry/Random/wave-surface.md
-          - Gradational Random: B-Geometry/Random/gradational-random.md
-          - Drape: B-Geometry/Random/drape.md
-          - Random Wire: B-Geometry/Random/random-wire.md
-      - Remapping:
-          - Geometry Remapping: B-Geometry/Remapping/geometry-remapping.md
-          - Pattern Remapping: B-Geometry/Remapping/pattern-remapping.md
-          - Image Remapping: B-Geometry/Remapping/image-remapping.md
-          - Text Remapping: B-Geometry/Remapping/text-remapping.md
+  # - Geometry:
+  #     - Tiling:
+  #         - Tile Pattern 1: B-Geometry/Tiling/tile-pattern-1.md
+  #         - Tile Pattern 2: B-Geometry/Tiling/tile-pattern-2.md
+  #         - Tile Pattern 3: B-Geometry/Tiling/tile-pattern-3.md
+  #         - Hexagonal Puzzle: B-Geometry/Tiling/hexagonal-puzzle.md
+  #     - Agents:
+  #         - Point Attractor 1: B-Geometry/Agents/point-attractor-1.md
+  #         - Point Attractor 2: B-Geometry/Agents/point-attractor-2.md
+  #         - Curve Attractor: B-Geometry/Agents/curve-attractor.md
+  #         - Vector Field: B-Geometry/Agents/vector-field.md
+  #     - Formulas:
+  #         - Spiral: B-Geometry/Formulas/spiral.md
+  #         - Ripple: B-Geometry/Formulas/ripple.md
+  #         - Fibonacci: B-Geometry/Formulas/fibonacci.md
+  #         - Fractal Tree: B-Geometry/Formulas/fractal-tree.md
+  #     - Randomness:
+  #         - Wave Surface: B-Geometry/Random/wave-surface.md
+  #         - Gradational Random: B-Geometry/Random/gradational-random.md
+  #         - Drape: B-Geometry/Random/drape.md
+  #         - Random Wire: B-Geometry/Random/random-wire.md
+  #     - Remapping:
+  #         - Geometry Remapping: B-Geometry/Remapping/geometry-remapping.md
+  #         - Pattern Remapping: B-Geometry/Remapping/pattern-remapping.md
+  #         - Image Remapping: B-Geometry/Remapping/image-remapping.md
+  #         - Text Remapping: B-Geometry/Remapping/text-remapping.md
 # part 3
   # - Form:
   #     - Aggregating:

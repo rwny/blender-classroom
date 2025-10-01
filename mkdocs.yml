@@ -80,36 +80,43 @@ nav:
           - Image Remapping: B-Geometry/Remapping/image-remapping.md
           - Text Remapping: B-Geometry/Remapping/text-remapping.md
 # part 3
-  - Form:
-      - Aggregating:
-          - Brick Wall: C-Form/Aggregating/brick-wall.md
-          - Block: C-Form/Aggregating/block.md
-          - Bird Nest: C-Form/Aggregating/bird-nest.md
-          - Pine Cone: C-Form/Aggregating/pine-cone.md
-      - Framing:
-          - Waffle: C-Form/Framing/waffle.md
-          - Contour: C-Form/Framing/contour.md
-          - Weaving: C-Form/Framing/weaving.md
-          - Geodesic Dome: C-Form/Framing/geodesic-dome.md
-      - Tessellating:
-          - Shell: C-Form/Tessellating/shell.md
-          - Gouge: C-Form/Tessellating/gouge.md
-          - Pyramid: C-Form/Tessellating/pyramid.md
-          - Bubble: C-Form/Tessellating/bubble.md
-      - Mesh:
-          - Mesh Subdivision: C-Form/Mesh/mesh-subdivision.md
-          - Chained Tile: C-Form/Mesh/chained-tile.md
-          - Metaball: C-Form/Mesh/metaball.md
-          - Isosurface: C-Form/Mesh/isosurface.md
-      - Drawing:
-          - 2D Cut Drawing: C-Form/Drawing/2d-cut.md
-          - Section Drawing: C-Form/Drawing/section.md
-          - Text Labeling: C-Form/Drawing/text-label.md
-          - Make 2D: C-Form/Drawing/make-2d.md
+  # - Form:
+  #     - Aggregating:
+  #         - Brick Wall: C-Form/Aggregating/brick-wall.md
+  #         - Block: C-Form/Aggregating/block.md
+  #         - Bird Nest: C-Form/Aggregating/bird-nest.md
+  #         - Pine Cone: C-Form/Aggregating/pine-cone.md
+  #     - Framing:
+  #         - Waffle: C-Form/Framing/waffle.md
+  #         - Contour: C-Form/Framing/contour.md
+  #         - Weaving: C-Form/Framing/weaving.md
+  #         - Geodesic Dome: C-Form/Framing/geodesic-dome.md
+  #     - Tessellating:
+  #         - Shell: C-Form/Tessellating/shell.md
+  #         - Gouge: C-Form/Tessellating/gouge.md
+  #         - Pyramid: C-Form/Tessellating/pyramid.md
+  #         - Bubble: C-Form/Tessellating/bubble.md
+  #     - Mesh:
+  #         - Mesh Subdivision: C-Form/Mesh/mesh-subdivision.md
+  #         - Chained Tile: C-Form/Mesh/chained-tile.md
+  #         - Metaball: C-Form/Mesh/metaball.md
+  #         - Isosurface: C-Form/Mesh/isosurface.md
+  #     - Drawing:
+  #         - 2D Cut Drawing: C-Form/Drawing/2d-cut.md
+  #         - Section Drawing: C-Form/Drawing/section.md
+  #         - Text Labeling: C-Form/Drawing/text-label.md
+  #         - Make 2D: C-Form/Drawing/make-2d.md
 # part 4
-  - Simulation:
-      - Physics:
-          - Tensile Fabric: D-Simulation/Physics/tensile-fabric.md
-          - Inflated Structure: D-Simulation/Physics/inflated-structure.md
-          - Origami: D-Simulation/Physics/origami.md
-          - Differential Growth: D-Simulation/Physics/differential-growth.md
+  # - Simulation:
+  #     - Physics:
+  #         - Tensile Fabric: D-Simulation/Physics/tensile-fabric.md
+  #         - Inflated Structure: D-Simulation/Physics/inflated-structure.md
+  #         - Origami: D-Simulation/Physics/origami.md
+  #         - Differential Growth: D-Simulation/Physics/differential-growth.md
+# part 4
+  - Experience:
+      - Texture:
+          - Noise Texture: E-Exprience/NoiseTexture.md
+      # - material:
+          # - water: E-Exprience/water.md
+
